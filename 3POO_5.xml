@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>3POO_5</name>
+    </assembly>
+    <members>
+        <member name="T:_3POO_5.Porra">
+            <summary>
+            This class manages the data and scoring logic of a participant in the betting pool.
+            It stores the participant's name, predicted winner, finalist, top scorer and points.
+            </summary>
+        </member>
+        <member name="F:_3POO_5.Porra.izena">
+            <summary>The name of the participant.</summary>
+        </member>
+        <member name="F:_3POO_5.Porra.irabazlea">
+            <summary>The team the participant thinks will win the championship.</summary>
+        </member>
+        <member name="F:_3POO_5.Porra.finalista">
+            <summary>The second team the participant thinks will reach the final.</summary>
+        </member>
+        <member name="F:_3POO_5.Porra.goleatzailea">
+            <summary>The player the participant thinks will be the top scorer.</summary>
+        </member>
+        <member name="F:_3POO_5.Porra.puntuak">
+            <summary>The total points accumulated by the participant.</summary>
+        </member>
+        <member name="P:_3POO_5.Porra.Izena">
+            <summary>Gets or sets the name of the participant.</summary>
+        </member>
+        <member name="P:_3POO_5.Porra.Irabazlea">
+            <summary>Gets or sets the team picked as winner.</summary>
+        </member>
+        <member name="P:_3POO_5.Porra.Finalista">
+            <summary>Gets or sets the team picked as finalist.</summary>
+        </member>
+        <member name="P:_3POO_5.Porra.Goleatzailea">
+            <summary>Gets or sets the player picked as top scorer.</summary>
+        </member>
+        <member name="P:_3POO_5.Porra.Puntuak">
+            <summary>Gets or sets the total points of the participant.</summary>
+        </member>
+        <member name="M:_3POO_5.Porra.#ctor(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Constructor. Creates a new Porra object with all the participant data.
+            </summary>
+            <param name="i">Name of the participant.</param>
+            <param name="ir">Team picked as winner.</param>
+            <param name="fi">Team picked as finalist.</param>
+            <param name="go">Player picked as top scorer.</param>
+            <param name="p">Starting points read from the file.</param>
+        </member>
+        <member name="M:_3POO_5.Porra.Pantailaratu">
+            <summary>
+            Returns all the participant data in a readable format to show on screen.
+            </summary>
+            <returns>A formatted string with the name, winner, finalist, scorer and points.</returns>
+        </member>
+        <member name="M:_3POO_5.Porra.ToString">
+            <summary>
+            Returns the participant data separated by dashes to save in the text file.
+            </summary>
+            <returns>A string like: name-winner-finalist-scorer-points.</returns>
+        </member>
+        <member name="M:_3POO_5.Porra.AsmatuIrabazlea">
+            <summary>
+            Adds 25 points for correctly guessing the winner and returns the updated total.
+            </summary>
+            <returns>Current points plus 25.</returns>
+        </member>
+        <member name="M:_3POO_5.Porra.AsmatuBiFinalistak">
+            <summary>
+            Adds 20 points for correctly guessing both finalists and returns the updated total.
+            </summary>
+            <returns>Current points plus 20.</returns>
+        </member>
+        <member name="M:_3POO_5.Porra.Goleko">
+            <summary>
+            Adds 3 points for correctly guessing a goal scorer and returns the updated total.
+            </summary>
+            <returns>Current points plus 3.</returns>
+        </member>
+        <member name="T:_3POO_5.Program">
+            <summary>
+            Main class of the application. Controls the menu and manages reading and saving the file.
+            </summary>
+        </member>
+        <member name="F:_3POO_5.Program.lp">
+            <summary>
+            List that stores all the participants loaded from the file.
+            </summary>
+        </member>
+        <member name="M:_3POO_5.Program.Main">
+            <summary>
+            Entry point of the application. Loads the file and shows the menu until the user exits.
+            </summary>
+        </member>
+        <member name="M:_3POO_5.Program.SartuEmaitzak">
+            <summary>
+            Asks the user for the match results and updates the points of all participants.
+            </summary>
+        </member>
+        <member name="M:_3POO_5.Program.lortugolak">
+            <summary>
+            Asks the user how many goals there were. If the input is invalid, asks again.
+            </summary>
+            <returns>The number of goals as a valid integer.</returns>
+        </member>
+        <member name="M:_3POO_5.Program.IrabazleeiPuntuEguneraketa(System.String)">
+            <summary>
+            Adds 25 points to all participants who correctly guessed the winner.
+            </summary>
+            <param name="ir">The name of the winning team.</param>
+        </member>
+        <member name="M:_3POO_5.Program.FinalisteiPuntuEguneraketa(System.String,System.String)">
+            <summary>
+            Adds 20 points to all participants who correctly guessed both finalists.
+            The order of the teams does not matter.
+            </summary>
+            <param name="fi">First finalist team.</param>
+            <param name="ir">Second finalist team.</param>
+        </member>
+        <member name="M:_3POO_5.Program.GoleatzaileenPuntuEguneraketa(System.String)">
+            <summary>
+            Adds 3 points to all participants who correctly guessed a goal scorer.
+            </summary>
+            <param name="gol">The name of the player who scored.</param>
+        </member>
+        <member name="M:_3POO_5.Program.FitxategiaIrakurri">
+            <summary>
+            Reads the file porrak.txt and loads all participants into the list.
+            Each line is split by dashes: name-winner-finalist-scorer-points.
+            </summary>
+        </member>
+        <member name="M:_3POO_5.Program.FitxategiraPuntuak">
+            <summary>
+            Saves all participants back to porrak.txt with their updated points.
+            The file is overwritten completely.
+            </summary>
+        </member>
+        <member name="M:_3POO_5.Program.InprimatuPorrak">
+            <summary>
+            Prints all participants and their current points on screen.
+            </summary>
+        </member>
+    </members>
+</doc>
