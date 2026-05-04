@@ -1,0 +1,27 @@
+{
+  "api/_3POO_5.Porra.html": {
+    "href": "api/_3POO_5.Porra.html",
+    "title": "Class Porra | 3POO_5 Documentation",
+    "summary": "Class Porra Namespace _3POO_5 Assembly 3POO_5.dll This class manages the data and scoring logic of a participant in the betting pool. It stores the participant's name, predicted winner, finalist, top scorer and points. public class Porra Inheritance object Porra Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) Constructors Porra(string, string, string, string, int) Constructor. Creates a new Porra object with all the participant data. public Porra(string i, string ir, string fi, string go, int p) Parameters i string Name of the participant. ir string Team picked as winner. fi string Team picked as finalist. go string Player picked as top scorer. p int Starting points read from the file. Properties Finalista Gets or sets the team picked as finalist. public string Finalista { get; set; } Property Value string Goleatzailea Gets or sets the player picked as top scorer. public string Goleatzailea { get; set; } Property Value string Irabazlea Gets or sets the team picked as winner. public string Irabazlea { get; set; } Property Value string Izena Gets or sets the name of the participant. public string Izena { get; set; } Property Value string Puntuak Gets or sets the total points of the participant. public int Puntuak { get; set; } Property Value int Methods AsmatuBiFinalistak() Adds 20 points for correctly guessing both finalists and returns the updated total. public int AsmatuBiFinalistak() Returns int Current points plus 20. AsmatuIrabazlea() Adds 25 points for correctly guessing the winner and returns the updated total. public int AsmatuIrabazlea() Returns int Current points plus 25. Goleko() Adds 3 points for correctly guessing a goal scorer and returns the updated total. public int Goleko() Returns int Current points plus 3. Pantailaratu() Returns all the participant data in a readable format to show on screen. public string Pantailaratu() Returns string A formatted string with the name, winner, finalist, scorer and points. ToString() Returns the participant data separated by dashes to save in the text file. public override string ToString() Returns string A string like: name-winner-finalist-scorer-points."
+  },
+  "api/_3POO_5.Program.html": {
+    "href": "api/_3POO_5.Program.html",
+    "title": "Class Program | 3POO_5 Documentation",
+    "summary": "Class Program Namespace _3POO_5 Assembly 3POO_5.dll Main class of the application. Controls the menu and manages reading and saving the file. public class Program Inheritance object Program Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString()"
+  },
+  "api/_3POO_5.html": {
+    "href": "api/_3POO_5.html",
+    "title": "Namespace _3POO_5 | 3POO_5 Documentation",
+    "summary": "Namespace _3POO_5 Classes Porra This class manages the data and scoring logic of a participant in the betting pool. It stores the participant's name, predicted winner, finalist, top scorer and points. Program Main class of the application. Controls the menu and manages reading and saving the file."
+  },
+  "api/index.html": {
+    "href": "api/index.html",
+    "title": "API Reference | 3POO_5 Documentation",
+    "summary": "API Reference Technical documentation of all classes and methods in the 3POO_5 project."
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "3POO_5 - Porra Sistema | 3POO_5 Documentation",
+    "summary": "3POO_5 - Porra Sistema Championship betting pool management system built with .NET. Scoring Prediction Points Correct winner +25 points Both finalists correct +20 points Correct goal scorer +3 points Classes Porra — Participant data and scoring logic. Program — Menu and file management."
+  }
+}
